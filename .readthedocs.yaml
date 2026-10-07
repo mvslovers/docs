@@ -1,0 +1,15 @@
+# Read the Docs: the landing page of mvslovers.readthedocs.io.  The books
+# themselves are subprojects (Admin > Subprojects), one per product, built
+# in their own repositories.
+version: 2
+submodules:
+  include: all
+build:
+  os: ubuntu-24.04
+  tools:
+    python: "3.12"
+  commands:
+    - mkdir -p "$READTHEDOCS_OUTPUT/html"
+    - cp site/index.html "$READTHEDOCS_OUTPUT/html/"
+    - cp bookmaster/web.css "$READTHEDOCS_OUTPUT/html/bookmaster.css"
+    - cp -R bookmaster/fonts "$READTHEDOCS_OUTPUT/html/fonts"

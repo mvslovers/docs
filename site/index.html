@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mvslovers manuals</title>
+<link rel="stylesheet" href="bookmaster.css">
+<style>
+main.landing { max-width: 64rem; margin: 0 auto; }
+.products { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.5rem; margin: 2rem 0; }
+.product { border-top: 6px solid var(--ink); padding-top: .9rem; }
+.product h3 { border: 0; margin: 0 0 .4rem; padding: 0; font-size: 1.3rem; }
+.product .books { font-family: 'IBM Plex Sans', sans-serif; font-size: .9rem; color: var(--muted); }
+.product.planned { border-top-color: var(--line); color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="bm-top"><a href="index.html">mvslovers manuals</a><span class="num">MVS 3.8j</span></header>
+<main class="landing">
+<h2>Manuals</h2>
+<p>Books for the mvslovers software for MVS 3.8j on Hercules: the cc370 cross-toolchain, its C library, and the programs built with them. Each book is here to read online and as a PDF.</p>
+<div class="products">
+  <section class="product">
+    <h3><a href="/projects/libc370/">libc370</a></h3>
+    <p>The C library for MVS 3.8j programs built with cc370.</p>
+    <p class="books">ML01-0003 Programmer's Guide · ML01-0004 Library Reference</p>
+  </section>
+  <section class="product planned">
+    <h3>cc370</h3>
+    <p>The host-native cross-toolchain: compiler, assembler, linkage editor and utilities.</p>
+    <p class="books">ML01-0001 User's Guide · ML01-0002 Command Reference -- coming</p>
+  </section>
+  <section class="product planned">
+    <h3>mbt</h3>
+    <p>The MVS build tool.</p>
+    <p class="books">ML02 -- planned</p>
+  </section>
+  <section class="product planned">
+    <h3>BREXX/370</h3>
+    <p>The REXX interpreter for MVS 3.8j.</p>
+    <p class="books">ML03 -- in preparation</p>
+  </section>
+</div>
+</main>
+</body>
+</html>
