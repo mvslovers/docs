@@ -10,7 +10,9 @@ main.landing { max-width: 64rem; margin: 0 auto; }
 .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.5rem; margin: 2rem 0; }
 .product { border-top: 6px solid var(--ink); padding-top: .9rem; }
 .product h3 { border: 0; margin: 0 0 .4rem; padding: 0; font-size: 1.3rem; }
-.product .books { font-family: 'IBM Plex Sans', sans-serif; font-size: .9rem; color: var(--muted); }
+.product .books { font-family: 'IBM Plex Sans', sans-serif; font-size: .9rem; color: var(--muted); list-style: none; padding: 0; margin: .4rem 0 0; }
+.product .books li { margin: .15rem 0; }
+.product h3 .repo { font-family: 'IBM Plex Mono', monospace; font-size: .8rem; font-weight: normal; color: var(--muted); margin-left: .4rem; }
 .product.planned { border-top-color: var(--line); color: var(--muted); }
 </style>
 </head>
@@ -18,27 +20,41 @@ main.landing { max-width: 64rem; margin: 0 auto; }
 <header class="bm-top"><a href="index.html">mvslovers manuals</a><span class="num">MVS 3.8j</span></header>
 <main class="landing">
 <h2>Manuals</h2>
-<p>Books for the mvslovers software for MVS 3.8j on Hercules: the cc370 cross-toolchain, its C library, and the programs built with them. Each book is here to read online and as a PDF.</p>
+<p>Books for the mvslovers software for MVS 3.8j on Hercules: the CC/370 cross-toolchain, its C library LIBC/370, and the programs built with them. Each book is here to read online and as a PDF.</p>
+<p>These pages follow the current development state of each project, so they may already describe changes that are not yet released. The edition that belongs to a release is attached as PDF to that release on GitHub.</p>
 <div class="products">
   <section class="product">
-    <h3><a href="/projects/cc370/">cc370</a></h3>
+    <h3><a href="/projects/cc370/">CC/370</a> <span class="repo">cc370</span></h3>
     <p>The host-native cross-toolchain: compiler, assembler, linkage editor and utilities.</p>
-    <p class="books">ML01-0001 User's Guide · ML01-0002 Command Reference</p>
+    <ul class="books">
+      <li>ML01-0001 User's Guide</li>
+      <li>ML01-0002 Command Reference</li>
+    </ul>
   </section>
   <section class="product">
-    <h3><a href="/projects/libc370/">libc370</a></h3>
-    <p>The C library for MVS 3.8j programs built with cc370.</p>
-    <p class="books">ML01-0003 Programmer's Guide · ML01-0004 Library Reference</p>
+    <h3><a href="/projects/libc370/">LIBC/370</a> <span class="repo">libc370</span></h3>
+    <p>The C library for MVS 3.8j programs built with CC/370.</p>
+    <ul class="books">
+      <li>ML01-0003 Programmer's Guide</li>
+      <li>ML01-0004 Library Reference</li>
+    </ul>
   </section>
   <section class="product planned">
-    <h3>mbt</h3>
+    <h3>MBT <span class="repo">mbt</span></h3>
     <p>The MVS build tool.</p>
-    <p class="books">ML02 -- planned</p>
+    <ul class="books">
+      <li>ML02 -- planned</li>
+    </ul>
   </section>
   <section class="product">
-    <h3><a href="/projects/brexx370/">BREXX/370</a></h3>
+    <h3><a href="/projects/brexx370/">BREXX/370</a> <span class="repo">brexx370</span></h3>
     <p>The REXX interpreter for MVS 3.8j, with its library and samples.</p>
-    <p class="books">ML03-0001 User's Guide · ML03-0002 Reference · ML03-0003 Library and Samples -- in preparation</p>
+    <ul class="books">
+      <li>ML03-0001 User's Guide</li>
+      <li>ML03-0002 Reference</li>
+      <li>ML03-0003 Library and Samples</li>
+      <li>in preparation</li>
+    </ul>
   </section>
 </div>
 </main>
